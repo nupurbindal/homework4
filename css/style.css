@@ -45,27 +45,28 @@ nav a:hover{
     transition: top 1s ease-out;
     z-index: 1;
     position: absolute;
-    margin: -40;
+    top: -40px;
 
   /*Your code here - position relative to the parent */
   /*Your code here - place 40px higher */;
 }
 
-/*Your code here*/
-/*Add the selector and rule to move the skip 
-link to the exact top of the page.*/
- 
+.skip a:focus{
+    position: absolute;
+    top: 0px;
+}
 
-/*Your code here*/
-/*Add the selector and code to put a 2px black 
-border around all elements in focus.*/
+
+:focus{
+    border: 2px solid black;
+}
   
 
 footer{
   background-color: black;
   color: white;
   grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 7 / 1;   /*Can you rewrite it?*/
+  grid-row: 7 / span 1;   /*Can you rewrite it?*/
   padding-top: 30px;
   text-align: center;
 }
@@ -88,12 +89,9 @@ header{
     color: white;
     height: 400px;                /* Parallax effect */
 
-    background-image: 'header.jpg';
+    background-image: url('../images/header.jpg');
     grid-column: 1 / -1;
-    grid-row: 2 / 1;
-    /* Your code here */
-    /* Set background-image to header.jpg in the images folder */
-    /* Span one row */
+    grid-row: 2 / span 1;
 }
 
 header p{
@@ -112,52 +110,41 @@ header p{
 
 }
 .about, .method, .clients, .contact{
-    grid-column: 2 / 1;
+    grid-column: 2 / span 1;
 
 }
 
 .about-image, .method-image, .clients-image, .contact-image{
-   /*Your code here */
-   /* See documentation for mobile view */
     grid-column: 1 / -1;
     max-height: 700px;
     overflow: hidden;
 }
 
 .about, .about-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-    grid-row: 3 / 1;
+    grid-row: 3 / span 1;
 
 }
 
 .method, .method-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-    grid-row: 4 / 1;
+    grid-row: 4 / span 1;
 }
 
 
 .clients, .clients-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-    grid-row: 5 / 1;
+    grid-row: 5 / span 1;
 }
 
 
 .contact, .contact-image{
-  /*Your code here */
-  /* See documentation for mobile view */
-    grid-row: 6 / 1;
+    grid-row: 6 / span 1;
 }
 
 .text-block{
     background-color: rgba(255, 255, 255, .8);
     border: 10px solid black;
     padding: 30px;
-    /*Your code here:*/
-    /*Align the content in the center */
     align-content: center;
+    margin: auto;
 
 }
 
@@ -166,8 +153,8 @@ header p{
 @media all and (min-width: 800px){
 
   .container{
-  /*Your code here */
-  /* See documentation for desktop view */ 
+      grid-template-columns: 50px auto 500px auto 50px;
+      grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
   }
 
   nav{
@@ -178,13 +165,39 @@ header p{
   }
 
   .about, .clients, .method-image, .contact-image{
-  /*Your code here */
-  /* See documentation for desktop view */ 
+      grid-column: 3 / span 2;
   }
 
   .about-image, .clients-image, .method, .contact{
-    /*Your code here */
-    /* See documentation for desktop view */ 
+      grid-column: 2 / span 2;
+    }
+    
+    .about-image{
+    grid-row: 3 / span 1;
+
+}
+
+    .method-image{
+        grid-row: 4 / span 1;
+    }
+
+
+    clients-image{
+        grid-row: 5 / span 1;
+    }
+
+
+    .contact-image{
+        grid-row: 6 / span 1;
+    }
+    
+
+    .text-block{
+        background-color: rgba(255, 255, 255, .8);
+        border: 10px solid black;
+        padding: 30px;
+        align-content: center;
+
     }
 
 
