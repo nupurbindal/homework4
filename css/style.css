@@ -172,25 +172,6 @@ header p{
       grid-column: 2 / span 2;
     }
     
-    .about-image{
-    grid-row: 3 / span 1;
-
-}
-
-    .method-image{
-        grid-row: 4 / span 1;
-    }
-
-
-    clients-image{
-        grid-row: 5 / span 1;
-    }
-
-
-    .contact-image{
-        grid-row: 6 / span 1;
-    }
-    
 
     .text-block{
         background-color: rgba(255, 255, 255, .8);
@@ -202,6 +183,7 @@ header p{
 
 
 }  /*End the media query*/
+
 
 @media screen and (prefers-reduced-motion: reduce){
   html{
